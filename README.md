@@ -1,4 +1,7 @@
 "# webdriverHomeWork" 
+**
+**
+**
 Test Scenario for kapsi.kz
 
 1.Open main page of kapsi.kz, this menu is shown 
@@ -17,11 +20,11 @@ Test Scenario for kapsi.kz
 5.When entering not correct phone number or password, following error is shown
 ![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/5kaspi.PNG)
 
-6.When user successfully logges in, his name is displayed
+6.When user successfully logged in, his name is displayed
 ![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/6kaspi.PNG)
 
-7.Click  on "Choose buyer",then it scrols down to the list of sellers
+7.Click  on "Выбрать продавца",then it scrols down to the list of sellers
 ![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/7kaspi.PNG)
 
 8.Hover over the "Все категории" link, then this vertical list of all categories is shown
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/8kaspi.PNG)
+![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/8kaspi.png)
