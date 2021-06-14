@@ -1,6 +1,7 @@
 package com.mycompany.app;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,9 +14,11 @@ public class MailServiceTest {
         driver.findElement(By.xpath("//*[@id=\"mailbox\"]/form[1]/div[1]/div[2]/input")).sendKeys("jaka9898");
         WebElement nextButton = driver.findElement(By.xpath("//*[@id=\"mailbox\"]/form[1]/button[1]"));
         nextButton.click();
-        driver.findElement(By.xpath("//*[@id=\"mailbox\"]/form[1]/div[2]/input")).sendKeys("mydreamis98");
+        /*driver.findElement(By.xpath("//*[@id=\"mailbox\"]/form[1]/div[2]/input")).sendKeys("mydreamis98");
         WebElement enterButton = driver.findElement(By.xpath("//*[@id=\"mailbox\"]/form[1]/button[2]"));
-        enterButton.click();
+        enterButton.click();*/
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("findElement(By.xpath(\"//*[@id=\\\"mailbox\\\"]/form[1]/button[2]\")).setAttribute('mydreamis98', val );");
         Thread.sleep(2000);
     }
 }
