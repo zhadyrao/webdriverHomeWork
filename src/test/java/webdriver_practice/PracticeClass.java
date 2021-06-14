@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package webdriver_practice;
 
 import org.junit.rules.Timeout;
 import org.openqa.selenium.By;
@@ -26,7 +26,7 @@ public class PracticeClass {
             String text = elements.get(5).getText();
             System.out.println(text);
             pages.get(2).click();
-            wait.until(ExpectedConditions.invisibilityOf(elements.get(5)));
+            //wait.until(ExpectedConditions.invisibilityOf(elements.get(5)));
             elements = driver.findElements(By.xpath("//div[@class='data-container' /ul/li]"));
             text = elements.get(5).getText();
             System.out.println(text);
