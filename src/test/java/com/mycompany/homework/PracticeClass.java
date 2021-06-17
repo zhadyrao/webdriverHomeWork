@@ -1,4 +1,4 @@
-package webdriver_practice;
+package com.mycompany.homework;
 
 import org.junit.rules.Timeout;
 import org.openqa.selenium.By;
