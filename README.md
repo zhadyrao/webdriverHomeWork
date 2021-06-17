@@ -1,30 +1,42 @@
-"# webdriverHomeWork" 
-**
-**
-**
-Test Scenario for kapsi.kz
 
-1.Open main page of kapsi.kz, this menu is shown 
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/1kaspi.PNG)
+Test Scenarios for kapsi.kz
 
+1.*Open main page of kapsi.kz, main menu is displayed
 
-2.Click on the button "Зарегистрироваться", then this alert box is shown 
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/2kaspi.PNG)
+2.*Click on the top right icon with person image, 
+*after press button "Зарегистрироваться", 
+*then window with input field of telelphone number is shown.
 
-3.Click on the "Maгазин", then following links to categories are shown
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/3kaspi.PNG)
+3.*On the main page click on the "Maгазин" menu link, 
+*then go to the "Обувь" tab, 
+*after we assign a price filter, by checking the checkbox of price range
 
-4.Open "Гид" link, the following search(input) box is displayed
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/4kaspi.PNG)
+4.*Open "Гид" link tab on the main menu
+*on shown search input box enter a word
+*press "Искать" button
+*check whether data corresponding to entered word is shown
 
-5.When entering not correct phone number or password, following error is shown
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/5kaspi.PNG)
+5.*Click on the top right icon with person image, 
+*enter phone number to input field
+*enter password to input field
+*when not correct data is entered
+*error message is displayed at the bottom of input field
 
-6.When user successfully logged in, his name is displayed
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/6kaspi.PNG)
+6.*Click on the top right icon with person image, 
+*enter phone number to input field
+*enter password to input field
+*when user enters correct data
+*check whether window, where 4-digit code from SMS is requested is shown
 
-7.Click  on "Выбрать продавца",then it scrols down to the list of sellers
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/7kaspi.PNG)
+7.*On the main page click on the "Maгазин" menu link, 
+*on the input search field enter a product name, that should be shown
+*click on the search button 
+*from list of products choose one 
+*click on "Выбрать продавца" button 
+*the page will scroll down to list of sellers
 
-8.Hover over the "Все категории" link, then this vertical list of all categories is shown
-![alt text](https://github.com/Zhadyra98/webdriverHomeWork/blob/main/src/imgs/8kaspi.png)
+8.*Click on the "Maps" tab
+*Then window with list of all city is displayed
+*choose needed city
+*check whether it is selected
+

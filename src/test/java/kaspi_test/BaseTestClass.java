@@ -6,24 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTestClass {
     BaseTestClass baseTestClass;
     WebDriver driver;
-    @BeforeClass
+    @BeforeTest
     public void beforeTest(){
         baseTestClass= new BaseTestClass();
         driver = new ChromeDriver();
         driver.get("https://kaspi.kz/");
+        driver.manage().window().maximize();
         if(driver.findElement(By.xpath("//div[@class='headerRegionConfirm__wrapper']")).isDisplayed()){
             WebElement confirmCityButton= driver.findElement(By.id("headerRegionConfirm__ConfirmButton"));
             confirmCityButton.click();
         }
-
     }
-    @AfterClass
+    @AfterTest
     public void afterTest(){
-       driver.quit();
+      driver.quit();
     }
 }
