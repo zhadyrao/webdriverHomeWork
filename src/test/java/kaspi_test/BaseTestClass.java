@@ -10,6 +10,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseTestClass {
     BaseTestClass baseTestClass;
     WebDriver driver;
@@ -19,6 +21,9 @@ public class BaseTestClass {
         driver = new ChromeDriver();
         driver.get("https://kaspi.kz/");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10000, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().setScriptTimeout(5000, TimeUnit.MILLISECONDS);
         if(driver.findElement(By.xpath("//div[@class='headerRegionConfirm__wrapper']")).isDisplayed()){
             WebElement confirmCityButton= driver.findElement(By.id("headerRegionConfirm__ConfirmButton"));
             confirmCityButton.click();

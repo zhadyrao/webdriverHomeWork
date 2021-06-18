@@ -17,7 +17,6 @@ public class MainMenuTest extends BaseTestClass{
     public void registerWindowDisplayTest() throws InterruptedException {
         WebElement iconPerson = driver.findElement(By.xpath("//*[@id=\"headerAuth\"]/a"));
         iconPerson.click();
-        Thread.sleep(3000);
         WebElement registerButton = driver.findElement(By.xpath("//div[contains(text(),'Зарегистрироваться')]"));
         registerButton.click();
         WebElement phoneNumberInput = driver.findElement(By.id("phoneNumberSendSmsTo"));
@@ -27,21 +26,18 @@ public class MainMenuTest extends BaseTestClass{
     public void selectItemsWithSpecifiedFilterTest() throws InterruptedException {
         WebElement magazinTabLink = driver.findElement(By.xpath("//a[contains(text(), 'Магазин')]"));
         magazinTabLink.click();
-        Thread.sleep(3000);
         WebElement cityAlmatyLink = driver.findElement(By.xpath("//a[contains(text(), 'Алматы')]"));
         cityAlmatyLink.click();
         WebElement obuvTab = driver.findElement(By.xpath("//a[.//span[contains(text(), 'Обувь')]]"));
         obuvTab.click();
         WebElement priceCheckBox = driver.findElement(By.xpath("//*[@id=\"page\"]/div[3]/div/div[1]/div[2]/div/div[2]/label[1]"));
         priceCheckBox.click();
-        Thread.sleep(3000);
         Assert.assertTrue(priceCheckBox.getAttribute("checked")==null);
     }
     @Test(description = "Test Scenario 4")
     public void searchingWordInGidTabTest() throws InterruptedException {
         WebElement gidTab = driver.findElement(By.xpath("//a[contains(text(), 'Гид')]"));
         gidTab.click();
-        Thread.sleep(3000);
         WebElement inputSearchBox = driver.findElement(By.id("search-block-items_help-input"));
         String searchStr="депозит";
         inputSearchBox.sendKeys(searchStr);
@@ -51,10 +47,9 @@ public class MainMenuTest extends BaseTestClass{
         Assert.assertTrue(inputResultSpan.getText().contains(searchStr));
     }
     @Test(description = "Test Scenario 5")
-    public void wrongDataEnterTest() throws InterruptedException {
+    public void wrongDataEnterTest()  {
         WebElement iconPerson = driver.findElement(By.xpath("//*[@id=\"headerAuth\"]/a"));
         iconPerson.click();
-        Thread.sleep(3000);
         WebElement inputField = driver.findElement(By.id("txtLogin"));
         inputField.sendKeys("7076466198");
         WebElement passwordField = driver.findElement(By.id("txtPassword"));
@@ -66,24 +61,21 @@ public class MainMenuTest extends BaseTestClass{
     }
 
     @Test(description = "Test Scenario 6")
-    public void correctDataEnterTest() throws InterruptedException {
+    public void correctDataEnterTest()  {
         WebElement iconPerson = driver.findElement(By.xpath("//*[@id=\"headerAuth\"]/a"));
         iconPerson.click();
-        Thread.sleep(3000);
         WebElement inputField = driver.findElement(By.id("txtLogin"));
         inputField.sendKeys("7076466198");
         WebElement passwordField = driver.findElement(By.id("txtPassword"));
-        passwordField.sendKeys("mydreamis98");
+        passwordField.sendKeys("correctPassword");
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Войти']"));
         loginButton.click();
-        Thread.sleep(4000);
         Assert.assertTrue(driver.findElement(By.id("SMSCodeForm")).isDisplayed());
     }
     @Test(description = "Test Scenario 7")
-    public void selectOneProductAndAddToCardTest() throws InterruptedException {
+    public void selectOneProductAndAddToCardTest() {
         WebElement magazinTabLink = driver.findElement(By.xpath("//a[contains(text(), 'Магазин')]"));
         magazinTabLink.click();
-        Thread.sleep(3000);
         WebElement cityAlmatyLink = driver.findElement(By.xpath("//a[contains(text(), 'Алматы')]"));
         cityAlmatyLink.click();
         WebElement inputElement = driver.findElement(By.xpath("//input[@class='search-bar__input']"));
@@ -94,10 +86,10 @@ public class MainMenuTest extends BaseTestClass{
         oneItemToChoose.click();
         WebElement chooseSellerButton = driver.findElement(By.xpath("//a[contains(text(), 'Выбрать продавца')]"));
         chooseSellerButton.click();
-        Thread.sleep(4000);
+
     }
     @Test(description = "Test Scenario 8")
-    public void changeCityTest() throws InterruptedException {
+    public void changeCityTest()  {
         WebElement mapsTab = driver.findElement(By.xpath("//a[contains(text(),'Maps')]"));
         mapsTab.click();
         WebElement citySemeyChoice = driver.findElement(By.xpath("//a[contains(text(), 'Семей')]"));

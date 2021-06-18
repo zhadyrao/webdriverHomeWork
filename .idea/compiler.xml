@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="webdriverHomeWork" target="1.7" />
+      <module name="webdriverHomeWork" target="11.0.11" />
     </bytecodeTargetLevel>
   </component>
 </project>
