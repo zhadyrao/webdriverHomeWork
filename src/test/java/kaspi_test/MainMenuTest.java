@@ -5,6 +5,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class MainMenuTest extends BaseTestClass{
     @Test(description = "Test Scenario 1")
     public void mainMenuTestTest(){
@@ -102,5 +104,6 @@ public class MainMenuTest extends BaseTestClass{
         citySemeyChoice.click();
         WebElement cityIcon = driver.findElement(By.xpath("//*[@id=\"headerRegionSelection\"]/span"));
         Assert.assertEquals(cityIcon.getText(),"Семей");
+
     }
 }
