@@ -68,7 +68,7 @@ public class MailServiceTest {
         draftsTab.click();
         Thread.sleep(4000);
         List<WebElement> draftMessages = driver.findElements(By.xpath("//span[@class='ll-sj__normal']"));
-        WebElement neededDraftMessage=null;//driver.findElements(By.xpath("//span[@class='ll-sj__normal']")).get(0);
+        WebElement neededDraftMessage=null;
         boolean isPresentMessage = false;
         for(WebElement it : draftMessages){
             if(it.getText().contains(subjectOfEmail)){
