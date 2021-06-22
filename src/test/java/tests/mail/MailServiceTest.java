@@ -1,4 +1,5 @@
-import kaspi_test.BaseTestClass;
+package tests.mail;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,7 +41,7 @@ public class MailServiceTest {
         String emailToSend = "oralkhanova.zhadyra@gmail.com";
         String subjectOfEmail = "Email from Selenium WebDriver";
         String bodyOfEmail="Hello, this email was send by the work of Selenium Webdriver";
-        WebElement inputEmailField = driver.findElement(By.xpath("//*[@id=\"mailbox\"]/form[1]/div[1]/div[2]/input"));
+        WebElement inputEmailField = driver.findElement(By.xpath("//input[@placeholder='Имя ящика']"));
         inputEmailField.sendKeys(email);
         WebElement enterPasswordButton = driver.findElement(By.xpath("//button[@data-testid='enter-password']"));
         enterPasswordButton.click();
